@@ -78,7 +78,7 @@ do
             "lambci/lambda:build-python$p" \
             /var/task/install-pip-packages.sh "scikit-learn==${s} joblib" /var/task/build/python/lib/python${p}/site-packages
 
-        layer_name=$(echo "python-${p}-scikit-learn-${s}" | tr '.' '-')
+        layer_name="cedrusScikitLearnLayer"
         zip_name="scikit-learn-${sklearn_version}.zip"
         cd ${BUILD_CACHE_DIR} && zip -r9 ${zip_name} python && cd ..
 
@@ -109,6 +109,6 @@ do
         done
 
         # Clean out cache for the next layer.
-        rm -rf ${BUILD_CACHE_DIR}/*
+        #rm -rf ${BUILD_CACHE_DIR}/*
     done
 done

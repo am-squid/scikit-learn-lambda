@@ -1,0 +1,2 @@
+Python version,scikit-learn version,region,arn
+3.8,=0.23.0,eu-west-3,arn:aws:lambda:eu-west-3:339713145096:layer:cedrusScikitLearnLayer:
